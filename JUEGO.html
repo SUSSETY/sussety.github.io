@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consejo del día</title>
+    <style>
+        #miBoton {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #si{
+            position: absolute;
+            left: 40%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <h1><center>TE PUEDO INVITAR A SALIR?</center></h1>
+    <br>
+    
+    <br>
+    <button href="bueno.html" id="si"> SI</button>
+    <button href="#" id="miBoton">NO</button>
+
+    <script>
+        const boton = document.getElementById('miBoton');
+        const distanciaEscape = 100; // Distancia mínima para que el botón se mueva
+        const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight;
+
+        document.addEventListener('mousemove', function(evento) {
+            const xCursor = evento.clientX;
+            const yCursor = evento.clientY;
+
+            const botonPos = boton.getBoundingClientRect();
+            const botonX = botonPos.left + botonPos.width / 2;
+            const botonY = botonPos.top + botonPos.height / 2;
+
+            const distanciaX = xCursor - botonX;
+            const distanciaY = yCursor - botonY;
+            const distancia = Math.sqrt(distanciaX ** 2 + distanciaY ** 2);
+
+            if (distancia < distanciaEscape) {
+                // Generar un valor aleatorio para la nueva posición
+                let nuevaX = Math.random() * (windowWidth - botonPos.width);
+                let nuevaY = Math.random() * (windowHeight - botonPos.height);
+
+                // Evitar que el botón salga de los límites de la ventana
+                if (nuevaX < 0) nuevaX = 0;
+                if (nuevaX + botonPos.width > windowWidth) nuevaX = windowWidth - botonPos.width;
+                if (nuevaY < 0) nuevaY = 0;
+                if (nuevaY + botonPos.height > windowHeight) nuevaY = windowHeight - botonPos.height;
+
+                // Aplicar las nuevas coordenadas aleatorias al botón
+                boton.style.left = nuevaX + 'px';
+                boton.style.top = nuevaY + 'px';
+            }
+        });
+    </script>
+</body>
+</html> 

@@ -5,88 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ME INTERESAS...</title>
     <style>
-        #body{
-            background: linear-gradient(to right,rgb(172, 101, 101) , rgb(159, 86, 143),rgb(235, 32, 32));
-
-        }
-        
-        #miBoton {
-            position: absolute;
-            left: 50%;
-            top: 55%;
-            transform: translate(-50%, -50%);
-            padding: 10px 20px;
-            background-color: black;
-            color: white;
-            border: 10px;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            padding: 15px 30px;
+        /* Estilos generales */
+        #body {
+            background: linear-gradient(to right, rgb(172, 101, 101), rgb(159, 86, 143), rgb(235, 32, 32));
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centra todo el contenido del body */
         }
 
-        #si{
-            position: absolute;
-            left: 40%;
-            top: 55%;
-            transform: translate(-50%, -50%);
-            padding: 10px 20px;
-            background-color: black;
-            color: white;
-            border: 10px;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            
-            padding: 15px 30px;
-
-        }
-        h1{
+        h1 {
             margin: 60px;
+            text-align: center; /* Centra el texto del encabezado */
         }
-        #letra{
-            
-          
+
+        #letra {
             font-size: 30px;
             padding: 8px;
+            text-align: center; /* Asegura que los textos estén centrados */
+            display: block; /* Para que los labels ocupen toda la línea */
         }
-        #gatitogif{
-            position:absolute;
-            top: 120px;
-            left: 260px;
-            border: 5px solid wheat; /* Ajusta el grosor, estilo y color del borde */
-            border-radius: 70px; /* Hace que las esquinas sean redondeadas */
+
+        #miBoton, #si {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+
+        #miBoton:hover, #si:hover {
+            background-color: #333;
+        }
+
+        #gatitogif, #gatitotiernoae {
+            border: 5px solid wheat;
+            border-radius: 70px;
             width: 180px;
             height: 250px;
         }
-        #gatitotiernoae{
-            border: 5px solid wheat; /* Ajusta el grosor, estilo y color del borde */
-            border-radius: 70px; /* Hace que las esquinas sean redondeadas */
-            width: 180px;
-            height: 250px;
-            position:absolute;
-            top: 120px;
-            left: 1070px;
+
+        /* Estilos para pantallas grandes (ordenadores) */
+        @media (min-width: 1024px) {
+            #gatitogif {
+                position: absolute;
+                top: 120px;
+                left: 260px;
+            }
+
+            #gatitotiernoae {
+                position: absolute;
+                top: 120px;
+                left: 1070px;
+            }
+
+            #miBoton, #si {
+                position: absolute;
+                top: 55%;
+            }
+
+            #si {
+                left: 40%;
+            }
+
+            #miBoton {
+                left: 60%;
+            }
         }
-        
+
+        /* Estilos para pantallas pequeñas (móviles) */
+        @media (max-width: 1023px) {
+            h1 {
+                margin: 20px;
+            }
+
+            #letra {
+                font-size: 20px;
+            }
+
+            #miBoton, #si {
+                position: static;
+                width: 100%;
+                max-width: 250px;
+            }
+
+            #gatitogif, #gatitotiernoae {
+                position: static;
+                margin: 20px auto;
+                display: block;
+            }
+        }
+
     </style>
 </head>
 <body id="body">
-    <h1 ><center>PERDONA SI TE ESTOY ROBANDO TU TIEMPITO...</center></h1>
+    <h1>PERDONA SI TE ESTOY ROBANDO TU TIEMPITO...</h1>
     <br>
-    <label id="letra" ><strong><center>Por si ves esto...</strong> Yo solo quería saber </center></label>
-
-    <label id="letra" ><strong><center>COMO ESTUVISTE EL DIA DE HOY...?</center></strong> </label>
+    <label id="letra"><strong>Por si ves esto... Yo solo quería saber</strong></label>
     <br>
+    <label id="letra"><strong>¿CÓMO ESTUVISTE EL DÍA DE HOY...?</strong></label>
+    <br><br>
     <button href="bueno.html" id="si">TODO BIEN</button>
-    <button href="#" id="miBoton" >MAL</button>
+    <button href="#" id="miBoton">MAL</button>
 
-    
-
-    <img src="gatito negro.gif" alt="" id="gatitogif">
-    <img src="https://www.mujerde10.com/wp-content/uploads/2023/08/tiernos-gatos-aesthetic.jpg" alt="" id="gatitotiernoae">
-   
-
-    
+    <img src="img/gatito negro.gif" alt="gatito negro" id="gatitogif">
+    <img src="img/tiernos-gatos-aesthetic.jpg" alt="gatito tierno" id="gatitotiernoae">
 </body>
-</html> 
+</html>

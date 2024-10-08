@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eres Única</title>
+    <style>
+        #body {
+            background: linear-gradient(to right, rgb(172, 101, 101), rgb(159, 86, 143), rgb(235, 32, 32));
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centra todo el contenido del body */
+        }
+        #text {
+            position: relative;
+            top: 100px;
+            font-size: 30px;
+            text-shadow: 2px 2px 4px white, -2px -2px 4px white, 2px -2px 4px white, -2px 2px 4px white; /* Borde blanco */
+            padding: 0 20px; /* Espacio lateral para el texto en pantallas pequeñas */
+        }
+        #img {
+            position: relative;
+            width: 300px;
+            top: 90px;
+            max-width: 100%; /* Asegura que la imagen no se desborde en pantallas pequeñas */
+            height: auto; /* Mantiene la proporción de la imagen */
+        }
+
+        /* Media query para pantallas pequeñas */
+        @media (max-width: 768px) {
+            #text {
+                font-size: 24px; /* Reduce el tamaño del texto en pantallas más pequeñas */
+                top: 70px; /* Ajusta la posición vertical */
+            }
+            #img {
+                width: 80%; /* Cambia el ancho de la imagen a un porcentaje para que se ajuste */
+                top: 50px; /* Ajusta la posición vertical */
+            }
+        }
+    </style>
+</head>
+<body id="body">
+    <label id="text"><strong>
+        "Conocerlas ha sido una de las mejores cosas que me ha pasado. <br>
+        Verte a ti y tu hija me inspira profundamente. <br>
+        Siempre estaré aquí para apoyarlas, en cada paso del camino. <br>
+        Las adversidades solo son oportunidades para demostrar lo fuertes que somos, <br>
+        y sé que juntas podrán con todo. Hice esto porque simplemente quise sacarles una sonrisa,<br>
+        un pequeño gesto puede hacer la diferencia en un día pesado. Espero que hayas tenido un hermoso día."
+    </strong></label>
+
+    <img src="gatito-tierno.gif" alt="" id="img">
+</body>
+</html>

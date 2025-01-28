@@ -69,24 +69,11 @@
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
 
-        .fotoIzquierda {
-            width: 300px;
-            position: absolute;
-            top: 100px;
-            left: 180px;
-            opacity: 0.5;
-            /* Ajusta el nivel de transparencia */
-            transition: opacity 0.3s ease-in-out;
-            /* Suaviza los cambios */
-            box-shadow: 0 2px 5px rgba(255, 255, 3, 0.6);
-            /* Sombra amarilla */
-        }
-
+        .fotoIzquierda,
         .fotoDerecha {
             width: 300px;
             position: absolute;
             top: 100px;
-            right: 180px;
             opacity: 0.5;
             /* Ajusta el nivel de transparencia */
             transition: opacity 0.3s ease-in-out;
@@ -95,6 +82,15 @@
             /* Sombra amarilla */
         }
 
+        .fotoIzquierda {
+            left: 180px;
+        }
+
+        .fotoDerecha {
+            right: 180px;
+        }
+
+        /* Estilos para pantallas de laptop */
         @media (max-width: 1024px) {
             .frase {
                 font-size: 20px;
@@ -118,6 +114,7 @@
             }
         }
 
+        /* Estilos para pantallas de tablet */
         @media (max-width: 768px) {
             .frase {
                 font-size: 18px;
@@ -141,6 +138,7 @@
             }
         }
 
+        /* Estilos para pantallas móviles */
         @media (max-width: 480px) {
             .frase {
                 font-size: 16px;
@@ -149,7 +147,21 @@
 
             .fotoIzquierda,
             .fotoDerecha {
-                width: 180px;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                opacity: 0.3;
+                z-index: -1;
+            }
+
+            .fotoIzquierda {
+                top: 0;
+            }
+
+            .fotoDerecha {
+                bottom: 0;
             }
 
             .izquierda,
@@ -235,11 +247,11 @@
             una forma loca de un programador enamorado de demostrar su corazón." <br>
         </p>
         <br>
-        <img src="gatitoPrincesa.gif" alt="Gatito Princesa">
+        <img src="img/gatitoPrincesa.gif" alt="Gatito Princesa">
     </div>
 
-    <img src="Amor1.jpg" class="fotoDerecha" alt="Tu Fotito♥">
-    <img src="Amor2.jpg" class="fotoIzquierda" alt="Tu Fotito♥">
+    <img src="img/Amor1.jpg" class="fotoDerecha" alt="Tu Fotito♥">
+    <img src="img/Amor2.jpg" class="fotoIzquierda" alt="Tu Fotito♥">
 
     <div class="izquierda">
         <strong>

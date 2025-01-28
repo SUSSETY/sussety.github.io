@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TE AMO♥</title>
+    <style>
+        /* Estilos generales */
+        body {
+            background-color: rgb(249, 204, 213);
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Estilos para los textos */
+        .hola {
+            font-size: 6vw; /* Ajuste automático del tamaño de fuente según el ancho de la pantalla */
+            text-shadow: 5px 2px 5px rgb(243, 251, 169);
+            text-align: center;
+            margin: 10px;
+        }
+
+        .move {
+            position: relative;
+            top: -10px;
+        }
+
+        /* Estilos para la imagen */
+        img {
+            position: relative;
+            top: -30px;
+            width: 80%; /* La imagen ocupa un 80% del ancho de la pantalla */
+            max-width: 300px; /* Limita el tamaño máximo de la imagen */
+        }
+
+        /* Estilos para el enlace convertido en botón */
+        .a {
+            font-size: 5vw; /* Ajuste automático del tamaño del texto del botón */
+            text-decoration: none;
+            border: none;
+            border-radius: 10px;
+            width: 70%; /* El botón ocupará un 70% del ancho de la pantalla */
+            height: 12vh; /* La altura del botón se ajusta al 12% de la altura de la ventana */
+            background-color: rgb(13, 235, 187);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            margin-top: 20px;
+            transition: background-color 0.3s, color 0.3s;
+            text-align: center;
+        }
+
+        /* Cambio de color al pasar el ratón */
+        .a:hover {
+            background-color: red;
+            color: white;
+        }
+
+        /* Asegura que el enlace dentro del botón no tenga subrayado */
+        .a a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Estilo adicional para la cabecera h2 */
+        h2 {
+            font-size: 6vw;
+            margin-top: 10px;
+        }
+
+        /* Media Queries para dispositivos más grandes */
+        @media (min-width: 768px) {
+            /* Para pantallas más grandes como laptops o tabletas */
+            .hola {
+                font-size: 3vw; /* Reduce el tamaño de la fuente para pantallas más grandes */
+            }
+            .a {
+                font-size: 2vw; /* Reduce el tamaño del botón */
+                width: 30%; /* Ajuste para que el botón no sea tan grande en pantallas grandes */
+            }
+            h2 {
+                font-size: 3vw; /* Ajuste de tamaño del título */
+            }
+        }
+
+        /* Media Queries para pantallas muy pequeñas */
+        @media (max-width: 480px) {
+            /* Para dispositivos móviles pequeños */
+            .hola {
+                font-size: 8vw; /* Aumenta el tamaño del texto en pantallas muy pequeñas */
+            }
+            .a {
+                font-size: 6vw; /* Aumenta el tamaño del botón en pantallas pequeñas */
+                width: 80%; /* Hace que el botón ocupe más espacio */
+            }
+            img {
+                width: 70%; /* La imagen se adapta más a dispositivos pequeños */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h3 class="hola">Holaaaaaaaaa... </h3>
+        <h3 class="hola move">Disculpame que te robe un Ratito de tu Tiempo</h3>
+    </div>
+
+    <center><img src="img/g1.gif" alt="GatitoNervioso"></center>
+    <br>
+    <center><h2 class="hola move">TENGO QUE DECIRTE ALGO ♥</h2></center>
+
+    <!-- Enlace convertido en un botón -->
+    <center><a href="frase.html" class="a"><strong>Continuar...</strong></a></center>
+    
+</body>
+</html>

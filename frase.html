@@ -3,122 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TE AMO♥</title>
+    <title>Frase para Nallely</title>
     <style>
-        /* Estilos generales */
         body {
-            background-color: rgb(249, 204, 213);
-            overflow: hidden;
+            background-color: black;
+            color: white;
             margin: 0;
             padding: 0;
-            position: relative;
             display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            position: relative;
+            overflow-x: hidden;
         }
 
-        /* Estilos para los textos */
-        .hola {
-            font-size: 6vw; /* Ajuste automático del tamaño de fuente según el ancho de la pantalla */
-            text-shadow: 5px 2px 5px rgb(243, 251, 169);
+        .sumilla {
             text-align: center;
-            margin: 10px;
-        }
-
-        .move {
-            position: relative;
-            top: -10px;
-        }
-
-        /* Estilos para la imagen */
-        img {
-            position: relative;
-            top: -30px;
-            width: 80%; /* La imagen ocupa un 80% del ancho de la pantalla */
-            max-width: 300px; /* Limita el tamaño máximo de la imagen */
-        }
-
-        /* Estilos para el enlace convertido en botón */
-        .a {
-            font-size: 5vw; /* Ajuste automático del tamaño del texto del botón */
-            text-decoration: none;
-            border: none;
-            border-radius: 10px;
-            width: 70%; /* El botón ocupará un 70% del ancho de la pantalla */
-            height: 12vh; /* La altura del botón se ajusta al 12% de la altura de la ventana */
-            background-color: rgb(13, 235, 187);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: black;
             margin-top: 20px;
-            transition: background-color 0.3s, color 0.3s;
+            position: relative;
+            left: 610px;
+            font-size: 20px;
+            text-shadow: 5px 2px 5px rgb(255, 3, 3);
+            
+        }
+
+        .frase {
+            font-size: 22px;
+            line-height: 1.5;
+            max-width: 80%;
+            margin: 20px auto;
             text-align: center;
+            text-shadow: 5px 2px 5px rgb(64, 132, 240);
+
         }
 
-        /* Cambio de color al pasar el ratón */
-        .a:hover {
-            background-color: red;
-            color: white;
+        img {
+            border-radius: 50px;
+            display: block;
+            margin: 20px auto;
+            max-width: 80%;
+            height: auto;
         }
 
-        /* Asegura que el enlace dentro del botón no tenga subrayado */
-        .a a {
-            color: inherit;
-            text-decoration: none;
+        .izquierda, .derecha {
+            position: absolute;
+            top: 20%;
+            font-size: 3rem;
+            color: red;
         }
 
-        /* Estilo adicional para la cabecera h2 */
-        h2 {
-            font-size: 6vw;
-            margin-top: 10px;
+        .izquierda {
+            left: 5%;
         }
 
-        /* Media Queries para dispositivos más grandes */
-        @media (min-width: 768px) {
-            /* Para pantallas más grandes como laptops o tabletas */
-            .hola {
-                font-size: 3vw; /* Reduce el tamaño de la fuente para pantallas más grandes */
+        .derecha {
+            right: 5%;
+        }
+
+        .izquierda p, .derecha p {
+            margin: 0;
+            padding: 0;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            
+        }
+
+        @media (max-width: 768px) {
+            .frase {
+                font-size: 18px;
+
+                max-width: 90%;
             }
-            .a {
-                font-size: 2vw; /* Reduce el tamaño del botón */
-                width: 30%; /* Ajuste para que el botón no sea tan grande en pantallas grandes */
-            }
-            h2 {
-                font-size: 3vw; /* Ajuste de tamaño del título */
+
+            .izquierda, .derecha {
+                font-size: 2rem;
+                top: 10%;
+                
             }
         }
 
-        /* Media Queries para pantallas muy pequeñas */
         @media (max-width: 480px) {
-            /* Para dispositivos móviles pequeños */
-            .hola {
-                font-size: 8vw; /* Aumenta el tamaño del texto en pantallas muy pequeñas */
+            .frase {
+                font-size: 16px;
+                max-width: 95%;
             }
-            .a {
-                font-size: 6vw; /* Aumenta el tamaño del botón en pantallas pequeñas */
-                width: 80%; /* Hace que el botón ocupe más espacio */
+
+            .izquierda, .derecha {
+                font-size: 1.5rem;
+                top: 5%;
             }
-            img {
-                width: 70%; /* La imagen se adapta más a dispositivos pequeños */
+        }
+
+        /* Estilo para los corazones */
+        .heart {
+            position: absolute;
+            bottom: -50px;
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            transform: rotate(-45deg);
+            animation: float 8s linear infinite;
+        }
+
+        .heart:before,
+        .heart:after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .heart:before {
+            top: -15px;
+            left: 0;
+        }
+
+        .heart:after {
+            left: 15px;
+            top: 0;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(-45deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(-45deg);
+                opacity: 0;
             }
         }
     </style>
 </head>
 <body>
-    <div>
-        <h3 class="hola">Holaaaaaaaaa... </h3>
-        <h3 class="hola move">Disculpame que te robe un Ratito de tu Tiempo</h3>
+    <div class="sumilla">
+        <p><strong>DE:</strong> Brandon Rojas</p>
+        <p><strong>PARA:</strong> Mi Pancitha de Winnie Pooh</p>
     </div>
 
-    <center><img src="img/g1.gif" alt="GatitoNervioso"></center>
-    <br>
-    <center><h2 class="hola move">TENGO QUE DECIRTE ALGO ♥</h2></center>
+    <div style="text-align: center; width: 100%;">
+        <p class="frase">"Mientras escribía código, mi mente comenzó a vagar,<br>
+            y en ese instante, tu sonrisa iluminó mi pantalla. <br>
+            Dejé de lado mi proyecto y decidí crear algo especial, <br>
+            un sitio web donde pueda expresar lo mucho que te amo. <br>
+            <br>
+            En el instante en que tu sonrisa ilumina el espacio, <br>
+            mi corazón late con una emoción que no puedo contener. <br>
+            Tus ojos, como dos estrellas brillantes en la noche, <br>
+            me atraen con una fuerza que me hace sentir vivo. <br>
+            <br>
+            Tu mirada, un rayo de sol que calienta mi alma, <br>
+            me hace sentir que estoy en el lugar correcto. <br>
+            En tus labios, una sonrisa que me hace sentir que soy el único, <br>
+            en tus ojos, una mirada que me hace sentir que soy el dueño de tu corazón. <br>
+            <br>
+            Esta página web es una carta virtual, escrita con codigos de amor, <br>
+            una forma loca de un programador enamorado de demostrar su corazón." <br>
+        </p>
+        <br>
+        <img src="gatitoPrincesa.gif" alt="Gatito Princesa">
+    </div>
 
-    <!-- Enlace convertido en un botón -->
-    <center><a href="frase.html" class="a"><strong>Continuar...</strong></a></center>
-    
+    <div class="izquierda">
+        <strong>
+        <p>N</p>
+        <p>A</p>
+        <p>L</p>
+        <p>L</p>
+        <p>E</p>
+        <p>L</p>
+        <p>Y</p>
+    </strong>
+    </div>
+
+    <div class="derecha">
+        <strong>
+        <p>T</p>
+        <p>E</p>
+        <br>
+        <p>♥</p>
+        <br>
+        <p>A</p>
+        <p>M</p>
+        <p>O</p>
+    </strong>
+    </div>
+
+    <!-- Script para generar los corazones -->
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 8000);
+        }
+
+        setInterval(createHeart, 300);
+    </script>
 </body>
 </html>

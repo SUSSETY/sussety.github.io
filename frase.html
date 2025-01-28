@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +27,6 @@
             left: 610px;
             font-size: 20px;
             text-shadow: 5px 2px 5px rgb(255, 3, 3);
-            
         }
 
         .frase {
@@ -36,7 +36,6 @@
             margin: 20px auto;
             text-align: center;
             text-shadow: 5px 2px 5px rgb(64, 132, 240);
-
         }
 
         img {
@@ -47,7 +46,8 @@
             height: auto;
         }
 
-        .izquierda, .derecha {
+        .izquierda,
+        .derecha {
             position: absolute;
             top: 20%;
             font-size: 3rem;
@@ -62,24 +62,82 @@
             right: 5%;
         }
 
-        .izquierda p, .derecha p {
+        .izquierda p,
+        .derecha p {
             margin: 0;
             padding: 0;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            
+        }
+
+        .fotoIzquierda {
+            width: 300px;
+            position: absolute;
+            top: 100px;
+            left: 180px;
+            opacity: 0.5;
+            /* Ajusta el nivel de transparencia */
+            transition: opacity 0.3s ease-in-out;
+            /* Suaviza los cambios */
+            box-shadow: 0 2px 5px rgba(255, 255, 3, 0.6);
+            /* Sombra amarilla */
+        }
+
+        .fotoDerecha {
+            width: 300px;
+            position: absolute;
+            top: 100px;
+            right: 180px;
+            opacity: 0.5;
+            /* Ajusta el nivel de transparencia */
+            transition: opacity 0.3s ease-in-out;
+            /* Suaviza los cambios */
+            box-shadow: 0 2px 5px rgba(255, 255, 3, 0.6);
+            /* Sombra amarilla */
+        }
+
+        @media (max-width: 1024px) {
+            .frase {
+                font-size: 20px;
+                max-width: 90%;
+            }
+
+            .fotoIzquierda,
+            .fotoDerecha {
+                width: 250px;
+            }
+
+            .izquierda,
+            .derecha {
+                font-size: 2.5rem;
+                top: 15%;
+            }
+
+            .sumilla {
+                left: 50%;
+                transform: translateX(-50%);
+            }
         }
 
         @media (max-width: 768px) {
             .frase {
                 font-size: 18px;
-
                 max-width: 90%;
             }
 
-            .izquierda, .derecha {
+            .fotoIzquierda,
+            .fotoDerecha {
+                width: 200px;
+            }
+
+            .izquierda,
+            .derecha {
                 font-size: 2rem;
                 top: 10%;
-                
+            }
+
+            .sumilla {
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
 
@@ -89,9 +147,20 @@
                 max-width: 95%;
             }
 
-            .izquierda, .derecha {
+            .fotoIzquierda,
+            .fotoDerecha {
+                width: 180px;
+            }
+
+            .izquierda,
+            .derecha {
                 font-size: 1.5rem;
                 top: 5%;
+            }
+
+            .sumilla {
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
 
@@ -131,6 +200,7 @@
                 transform: translateY(0) rotate(-45deg);
                 opacity: 1;
             }
+
             100% {
                 transform: translateY(-100vh) rotate(-45deg);
                 opacity: 0;
@@ -138,6 +208,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="sumilla">
         <p><strong>DE:</strong> Brandon Rojas</p>
@@ -161,35 +232,38 @@
             en tus ojos, una mirada que me hace sentir que soy el dueño de tu corazón. <br>
             <br>
             Esta página web es una carta virtual, escrita con codigos de amor, <br>
-            una forma loca de un programador enamorado de demostrar su corazón." <br>
+            una forma loca de un programador enamorado de demostrar su corazón." <br>
         </p>
         <br>
-        <img src="gatitoPrincesa.gif" alt="Gatito Princesa">
+        <img src="img/gatitoPrincesa.gif" alt="Gatito Princesa">
     </div>
+
+    <img src="img/Amor1.jpg" class="fotoDerecha" alt="Tu Fotito♥">
+    <img src="img/Amor2.jpg" class="fotoIzquierda" alt="Tu Fotito♥">
 
     <div class="izquierda">
         <strong>
-        <p>N</p>
-        <p>A</p>
-        <p>L</p>
-        <p>L</p>
-        <p>E</p>
-        <p>L</p>
-        <p>Y</p>
-    </strong>
+            <p>N</p>
+            <p>A</p>
+            <p>L</p>
+            <p>L</p>
+            <p>E</p>
+            <p>L</p>
+            <p>Y</p>
+        </strong>
     </div>
 
     <div class="derecha">
         <strong>
-        <p>T</p>
-        <p>E</p>
-        <br>
-        <p>♥</p>
-        <br>
-        <p>A</p>
-        <p>M</p>
-        <p>O</p>
-    </strong>
+            <p>T</p>
+            <p>E</p>
+            <br>
+            <p>♥</p>
+            <br>
+            <p>A</p>
+            <p>M</p>
+            <p>O</p>
+        </strong>
     </div>
 
     <!-- Script para generar los corazones -->
@@ -209,4 +283,5 @@
         setInterval(createHeart, 300);
     </script>
 </body>
+
 </html>
